@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HortaCasa</title>
+</head>
+
+<style>
+    .container-header {
+        display: flex;
+        flex-direction: row;
+        background-color: #eaf3e4;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        color: rgb(5, 82, 5);
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: auto;
+        padding-right: 10px;
+    }
+
+    .navegar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    .botao {
+        padding: 20px;
+        color: #0e6369;
+        font-size: 25px;
+    }
+
+    .botao-x {
+        color: #0e6369;
+        font-size: 25px;
+        background-color: #f0cc2b;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .botoes a {
+        text-decoration: none;
+    }
+
+    .ver-mais {
+        background-color: #f0cc2b;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 20px;
+        margin-right: 15px;
+    }
+
+    .contato {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 15px;
+        border: 3px solid #0e6369;
+        color: #0e6369;
+        margin-left: 15px;
+    }
+
+
+    .parte-1 {
+        background-color: #ccdbc2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px;
+    }
+
+    .parte-1 img {
+        width: 500px;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    .texto {
+        width: 50%;
+    }
+
+    .parte-1 h1 {
+        color: rgb(5, 82, 5);
+        font-size: 50px;
+    }
+
+    .parte-1 p {
+        font-size: 20px;
+    }
+
+    .chips {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .chip {
+        background-color: #eaf3e4;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .parte-2 {
+        display: flex;
+        flex-direction: row;
+        padding: 60px;
+        gap: 40px;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 7px;
+        width: 25%;
+    }
+
+    .titulo h1 {
+        color: rgb(5, 82, 5);
+        font-size: 40px;
+    }
+
+    .caixa {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        width: 75%;
+    }
+
+    .cartao {
+        display: flex;
+        flex-direction: column;
+        background-color: #eaf3e4;
+        padding: 20px;
+        border-radius: 20px;
+        width: 26%;
+        gap: 8px;
+    }
+
+    .cartao h2 {
+        color: rgb(5, 82, 5);
+        font-size: 24px;
+    }
+
+    .navegar a {
+        text-decoration: none;
+        color: #0e6369;
+    }
+
+    .ver-mais a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .contato a {
+        text-decoration: none;
+        color: #0e6369;
+    }
+
+    .enviar a {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer {
+        background-color: rgb(5, 82, 5);
+        color: white;
+        padding: 30px;
+    }
+
+    footer table {
+        width: 100%;
+    }
+
+    footer th {
+        text-align: left;
+    }
+
+    footer td {
+        vertical-align: top;
+    }
+
+    footer address {
+        font-style: normal;
+    }
+
+    @media (max-width: 485px) {
+
+        .container-header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 0px;
+        }
+
+        .navegar {
+            margin-right: 0px;
+            flex-wrap: wrap;
+        }
+
+        .botao {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .botao-x {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .parte-1 {
+            flex-direction: column;
+            padding: 25px;
+            gap: 20px;
+        }
+
+        .parte-1 img {
+            width: 100%;
+        }
+
+        .parte-1 h1 {
+            font-size: 32px;
+        }
+
+        .botoes {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ver-mais {
+            margin-right: 0px;
+        }
+
+        .contato {
+            margin-left: 0px;
+        }
+
+        .parte-2 {
+            flex-direction: column;
+            padding: 25px;
+            gap: 20px;
+        }
+
+        .titulo {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .caixa {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .cartao {
+            width: auto;
+        }
+
+        footer table, footer thead, footer tbody, footer tr, footer th, footer td {
+            display: block;
+        }
+
+        .texto {
+            width: 100%;
+        }
+
+        .chips {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+<header>
+    <div class="container-header">
+        <div class="logo">
+            <img src="assets/logo.svg">
+            <h1>HortaCasa</h1>
+        </div>
+
+        <div class="navegar">
+            <div class="botao"><a href="lp.html"><b>Início</b></a></div>
+            <div class="botao"><a href="plantas.html"><b>Plantas</b></a></div>
+            <div class="botao"><a href="contato.html"><b>Contato</b></a></div>
+            <div class="botao-x"><a href="plantas.html"><b>Ver plantas</b></a></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="parte-1">
+        <img src="assets/manjericao.jpg">
+
+        <div class="texto">
+            <p>Plantas > Manjericão</p>
+            <h1>Manjericão</h1>
+            <p>
+                Erva aromática que cresce bem em vasos e <br>
+                janelas ensolaradas. Ótima para molhos, saladas e chás.
+            </p>
+
+            <div class="chips">
+                <div class="chip"><b>Sol:</b> 6 h por dia</div>
+                <div class="chip"><b>Rega:</b> 2x por semana</div>
+                <div class="chip"><b>Colheita:</b> 60 dias</div>
+            </div>
+
+            <div class="botoes">
+                <div class="ver-mais"><a href="plantas.html"><b>Voltar às plantas</b></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parte-2">
+        <div class="titulo">
+            <h1>Passo a passo</h1>
+            <p>Três etapas para plantar sem erro</p>
+        </div>
+
+        <div class="caixa">
+            <div class="cartao">
+                <h2>1. Prepare o vaso</h2>
+                <p>Use terra solta e furos para drenagem.</p>
+            </div>
+
+            <div class="cartao">
+                <h2>2. Plante a muda</h2>
+                <p>Deixe 20 cm entre uma muda e outra.</p>
+            </div>
+
+            <div class="cartao">
+                <h2>3. Colha as folhas</h2>
+                <p>Corte de cima para estimular o crescimento.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <table>
+        <thead>
+            <tr>
+                <th>Horta em Casa</th>
+                <th>Explorar</th>
+                <th>Mais lidas</th>
+                <th>Contato</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        Guias simples para quem quer cultivar alimentos em <br>
+                        pouco espaço.
+                    </p>
+                </td>
+
+                <td>
+                    <ul>
+                        <li>Início</li>
+                        <li>Plantas</li>
+                        <li>Contato</li>
+                    </ul>
+                </td>
+
+                <td>
+                    <ul>
+                        <li>Manjericão</li>
+                        <li>Hortelã</li>
+                        <li>Tomate-cereja</li>
+                    </ul>
+                </td>
+
+                <td>
+                    <address>ola@hortaemcasa.com</address> <br>
+                    Vitória da Conquista, BA
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</footer>
+    
+</body>
+</html>
